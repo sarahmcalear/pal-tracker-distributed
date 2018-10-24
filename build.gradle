@@ -5,6 +5,8 @@ buildscript {
         springBootVersion = "1.5.7.RELEASE"
         springVersion = "4.3.8.RELEASE"
         mysqlVersion = "8.0.13"
+        springCloudDependenciesVersion = "Edgware.RELEASE"
+        springCloudServicesVersion = "1.6.4.RELEASE"
     }
 
     repositories {
@@ -13,14 +15,12 @@ buildscript {
     }
 
     dependencies {
-        classpath "mysql:mysql-connector-java:$mysqlVersion"
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
         classpath "mysql:mysql-connector-java:$mysqlVersion"
     }
 }
 
 apply plugin: DependenciesGraphPlugin
-
 subprojects {
     group "io.pivotal.pal.tracker"
 
