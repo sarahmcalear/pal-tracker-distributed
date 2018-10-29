@@ -32,6 +32,7 @@ public class AllocationController {
 
         if (projectIsActive(form.projectId)) {
             AllocationRecord record = gateway.create(formToFields(form));
+            System.out.println("Hi from create");
             return new ResponseEntity<>(present(record), HttpStatus.CREATED);
         }
 
